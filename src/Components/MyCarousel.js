@@ -1,22 +1,17 @@
 import React from "react";
 
-import "antd/dist/antd.css";
-import { Carousel } from "antd";
 
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import myJump from '../Images/myJump.jpg';
+import "antd/dist/antd.css";
+import { Carousel } from "antd";
 import myJump2 from '../Images/myJump2.jpg';
 
 
-import '../style/img.css'
-
-function onChange(a, b, c) {
-  console.log(a, b, c);
-}
+import '../style/img.css';
 
 const styles = {
 	card: {
@@ -34,7 +29,7 @@ const styles = {
 class MyCarousel extends React.Component {
   render() {
     return (
-		<Carousel afterChange={onChange}>
+		<Carousel>
 			<Container >
 				<Card style={styles.card}>
 				<CardMedia image={myJump2} className='bgImage'/>

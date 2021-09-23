@@ -27,7 +27,6 @@ import Fade from '@mui/material/Fade';
 
 
 class Us extends Component{
-
     render(){
         const { classes } = this.props;
         return(
@@ -107,16 +106,7 @@ class Us extends Component{
                         </Card>
                     </Grid>
                 </Grid>
-
-
-
-                <Box 
-                    px={{ xs: 3, sm: 10 }}
-                    py={{ xs: 1, sm: 7 }}
-                    color="white"
-                >
                     
-                </Box>
                 <Box sx={{m:1}}>
                     <Typography 
                         className={classes.titleStyle} 
@@ -184,10 +174,9 @@ const styles = {
         direction: "row",
 	},
     cardStyle: {
-        height: "110%",
+        height: "80%",
     },
     titleStyle: {
-        paddingTop: 20,
         paddingBottom: 30,
     },
 

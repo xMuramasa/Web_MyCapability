@@ -9,7 +9,6 @@ import {
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
-import Fade from '@mui/material/Fade';
 import './App.css';
 
 

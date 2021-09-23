@@ -51,15 +51,16 @@ class PrimaryAppBar extends Component {
 		<div>
 			<AppBar className={classes.barStyle} style={{ backgroundColor: '#212121' }}>
 				<Toolbar>
-
-
-					<a style={{width:"60%"}}>
+					<a style={{width: 300}}>
 						<img 
 							src={logo_name} 
 							alt="logo" 
-							className={classes.logoStyle}
+							style={{
+								maxWidth: 300,
+								marginRight: 10,
+							}}
 							onClick={() => this.handleButtonClick("/home")}
-						/>
+					/>
 					</a>
 					<div className={classes.divSpace}> </div>
 					<div className = {classes.headerOptions} >
@@ -72,10 +73,15 @@ class PrimaryAppBar extends Component {
 						<div className={classes.divSpace}> </div>
 
 						<Button 
-							className={classes.buttonStyle} color="inherit"
+							style={{
+								marginRight: 10,
+								maxWidth: 250,
+								minWidth: 200
+							}} 
+							color="inherit"
 							onClick={() => this.handleButtonClick("/app")}
 							>
-							<Typography> ¿Por qué My Capability? </Typography>
+							<Typography style={{ maxWidth: 250, minWidth: 200 }}> ¿Por qué My Capability? </Typography>
 						</Button>
 						<div className={classes.divSpace}> </div>
 						
@@ -105,13 +111,17 @@ class PrimaryAppBar extends Component {
 const styles = {
 	buttonStyle:{
 		marginRight: 10,
+		width: 100
+	},
+	titleStyle: {
+		width: 300
 	},
 	divSpace: {
 		marginRight: 20,
 		marginLeft: 20,
 	},
 	logoStyle: {
-		maxWidth: "20%",
+		maxWidth: 30,
 		marginRight: 10,
 	},
 	barStyle: {
