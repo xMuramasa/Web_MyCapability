@@ -1,25 +1,54 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {
+	Switch,
+	Route,
+	Link,
+	Redirect,
+	HashRouter
+} from "react-router-dom";
+
+import CssBaseline from '@mui/material/CssBaseline';
+import Toolbar from '@mui/material/Toolbar';
+import Fade from '@mui/material/Fade';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+import PrimaryAppBar from './Components/PrimaryAppBar.js';
+import Contacto from './Components/Contacto.js';
+import Home from './Components/Home.js';
+import Us from './Components/Us.js';
+import MyApp from './Components/LaApp.js';
+import Footer from './Components/Footer';
+
+class App extends Component {
+
+	componentDidMount() {
+    	document.title = "My Capability"
+  	}
+
+	render() {
+		return (
+			<HashRouter >
+				<CssBaseline />
+				
+				<PrimaryAppBar />
+
+				<Toolbar/>
+				
+				<React.Fragment>
+				<Redirect from='/' to='/home' />	
+				<Route path="/home" component={Home} />
+				<Route path="/nosotros" component={Us} />
+				<Route path="/app" component={MyApp} />
+				<Route path="/contacto" component={Contacto} />
+				</React.Fragment	>
+
+				<Toolbar/>
+        
+				<Footer />
+
+			</HashRouter>	
+		);
+	}
+}
 export default App;

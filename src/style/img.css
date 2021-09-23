@@ -1,0 +1,38 @@
+
+.bgImage {
+    padding-top: 56.25%;
+    filter: blur(5px);
+    -webkit-filter: opacity(80%);
+    -webkit-filter: blur(5px);
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .bg{
+    color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  }
+
+  .bg-rectangle{
+    width:100%;
+    height:60px;
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  }
+
+  .bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
